@@ -3,12 +3,12 @@
  * Card
  */
 public class Card {
-    private String num;
+    private String face;
     private String naipe;
     private int valor;
 
-    public Card(String num, String naipe) {
-        this.num = num;
+    public Card(String face, String naipe) {
+        this.face = face;
         this.naipe = naipe;
         this.valor = this.calcValor();
     }
@@ -16,11 +16,11 @@ public class Card {
     @Override
     //construtor
     public String toString() {
-        return this.num + this.naipe;
+        return this.face + this.naipe;
     }
 
-    public String getNum() {
-        return this.num;
+    public String getFace() {
+        return this.face;
     }
 
     public String getNaipe() {
@@ -33,7 +33,7 @@ public class Card {
 // cartas que possuem valores
     private int calcValor() {
         int result;
-        switch (this.num) {
+        switch (this.face) {
         case "A":
             result = 11;
             break;
