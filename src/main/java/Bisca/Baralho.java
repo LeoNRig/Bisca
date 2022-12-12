@@ -4,7 +4,6 @@ import java.util.TreeMap;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.List;
-import java.util.Coleções;
 public class Baralho {
 
     public String[] nipes = {" Ouro", "Copas", "Espadas", "Paus"};
