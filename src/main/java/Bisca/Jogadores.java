@@ -1,6 +1,5 @@
 package Bisca;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Jogadores {
 
@@ -13,7 +12,7 @@ public class Jogadores {
     public ArrayList<String> distribuirCartasParaJogadores(){
         
   
-        cartasDoBaralho = baralhoDoJogo.colocandoValoresNasCartasDoBaralho();
+        cartasDoBaralho = (ArrayList<String>) baralhoDoJogo.colocandoValoresNasCartasDoBaralho();
         
         for(int carta = 0; carta <=2 ; carta ++){
             cartasParaOJogador.add(carta,cartasDoBaralho.get(carta));
@@ -25,6 +24,16 @@ public class Jogadores {
     
     public String imprimirCartasDoJogador(){
         return "Cartas do Jogador: " +  distribuirCartasParaJogadores();
+    }
+    
+    public String jogarCarta () {
+        String cartaSelecionada = cartasEmMaos.remove(0);
+
+        return cartaSelecionada;
+    }
+    
+    public String imprimirCartaSelecionada(){
+        return jogarCarta();
     }
     
 }
